@@ -14,7 +14,7 @@ You have used types before. You are likely a developer who knows the difference 
 | ------ | ------- |
 | 1      | Unit    |
 | A + B  | Sum     |
-| A * B  | Product |
+| A × B  | Product |
 
 There are three types in Simplicity. Actually, they are more like type constructors: You start with the unit type as a base. Then you arrange what you have in sum and product types, again and again, until you get the type that you want. This way we can build integer types, string types (of fixed length) and much more.
 
@@ -23,11 +23,11 @@ There are three types in Simplicity. Actually, they are more like type construct
 | ·      | Unit    | 1     |      |
 | L(a)   | Left    | A + B | a has type A |
 | R(b)   | Right   | A + B | b has type B |
-| (a, b) | Product | A * B | a has type A and b has type B |
+| (a, b) | Product | A × B | a has type A and b has type B |
 
 There are four kinds of values in Simplicity. Again, they follow the recursive construction from before, so left and right values contain a smaller inner value, and product values contain a left and a right inner value.
 
-To help with readability, we write types in uppercase and values in lower case. `1`, `+` and `*` can be thought of as keywords in the type language. `·`, `L( )`, `R( )` and `( , )` are keywords in the value language.
+To help with readability, we write types in uppercase and values in lower case. `1`, `+` and `×` can be thought of as keywords in the type language. `·`, `L( )`, `R( )` and `( , )` are keywords in the value language.
 
 ## Combinators
 
@@ -77,7 +77,7 @@ Introspection into the execution environment (usually the spending transaction) 
 
 ## Circuit Representation
 
-Nesting combinators is a bit like building a circuit. Turns out one can visualize Simplicity programs as circuits. The boxes are combinators. `(x)` stands for the pair combinator. `↯` means that the combinator may fail. The labels indicate the type of values that live on each wire. 
+Nesting combinators is a bit like building a circuit. Turns out one can visualize Simplicity programs as circuits. The boxes are combinators. `(×)` stands for the pair combinator. `↯` means that the combinator may fail. The labels indicate the type of values that live on each wire. 
 
 ### Key Lock
 
